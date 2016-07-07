@@ -1,0 +1,9 @@
+{
+    "project_name": "New Types",
+    "repo_name": "{{ 'qtp-%s' % cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "organization_name": "qiita-spots",
+    "module_name": "{{ cookiecutter.repo_name.replace('-', '_') }}",
+    "author": "Qiita development team",
+    "email": "qiita.help@gmail.com",
+    "url": "{{ 'https://github.com/%s/%s' % (cookiecutter.organization_name, cookiecutter.repo_name) }}"
+}
