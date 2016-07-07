@@ -20,10 +20,9 @@ test suite. Also, if Qiita is running with the default server SSL certificate,
 you need to export the variable `QIITA_SERVER_CERT` in your environment, so the
 Qiita Client can perform secure connections against the Qiita server:
 
-```bash
+.. code-block:: bash
 
-export QIITA_SERVER_CERT=<QIITA_INSTALL_PATH>/qiita_core/support_files/server.crt
-```
+    $ export QIITA_SERVER_CERT=<QIITA_INSTALL_PATH>/qiita_core/support_files/server.crt
 
 Credits
 -------
