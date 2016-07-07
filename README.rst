@@ -42,31 +42,30 @@ values. Any of these values can be manually changed through the code:
 
 Example:
 
-```bash
-project_name [New Types]: biom
-repo_name [qtp-biom]:
-organization_name [qiita-spots]:
-module_name [qtp_biom]:
-author [Qiita development team]:
-email [qiita.help@gmail.com]:
-url [https://github.com/qiita-spots/qtp-biom]:
-```
+.. code-block:: bash
+    project_name [New Types]: biom
+    repo_name [qtp-biom]:
+    organization_name [qiita-spots]:
+    module_name [qtp_biom]:
+    author [Qiita development team]:
+    email [qiita.help@gmail.com]:
+    url [https://github.com/qiita-spots/qtp-biom]:
 
 After all the values have been introduced, Cookiecutter created a directory
 using the `repo_name` value in the current directory. The generated skeleton
 takes care of most of the initial plugin setup and Qiita communication, as well
 as common repository set up, including travis and coverages. As a plugin
 developer, you need to enable travis and coverage to be correctly reported,
-and you just need to fill up the `TODO's` marked in the code. The code
-is documented so the developer has directions to fill the `TODO's`. The following
-list contains a general overview of the `TODO's`:
+and you just need to fill up the "TODO's" marked in the code. The code
+is documented so the developer has directions to fill the "TODO's". The following
+list contains a general overview of the "TODO's":
 
- - File `README.rst`: Add a description of the artifact types added by the type plugin
- - File `module_name/validate.py`: Code to validate and fix the files of a new artifact
- - File `module_name/summary.py`: Code to generate an HTML summary of an artifact
- - File `module_name/tests/test_validate.py`: Code to properly test the validation of an artifact
- - File `module_name/tests/test_summary.py`: Code to properly test the HTML generation of an artifact summary
- - File `module_name/tests/test_plugin.py`: Code to properly test the integration of the plugin
+ - File 'README.rst': Add a description of the artifact types added by the type plugin
+ - File 'module_name/validate.py': Code to validate and fix the files of a new artifact
+ - File 'module_name/summary.py': Code to generate an HTML summary of an artifact
+ - File 'module_name/tests/test_validate.py': Code to properly test the validation of an artifact
+ - File 'module_name/tests/test_summary.py': Code to properly test the HTML generation of an artifact summary
+ - File 'module_name/tests/test_plugin.py': Code to properly test the integration of the plugin
 
-If you filled all the `TODO's` present in the code, congratulations! you finished
+If you filled all the "TODO's" present in the code, congratulations! you finished
 writing your Qiita Type plugin!
