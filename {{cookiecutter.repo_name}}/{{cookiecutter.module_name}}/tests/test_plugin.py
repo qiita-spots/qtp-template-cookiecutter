@@ -7,8 +7,8 @@
 # -----------------------------------------------------------------------------
 
 from unittest import TestCase, main
-from tempfile import mkdtemp
-from os import remove, environ
+from tempfile import mkdtemp, mkstemp
+from os import remove, environ, close
 from os.path import exists, isdir
 from shutil import rmtree
 from json import dumps
@@ -37,8 +37,14 @@ class PluginTests(TestCase):
         cls.qclient.post("/apitest/reset/")
 
     def setUp(self):
+        fd, fp = mkstemp()
+        close(fd)
+        with open(fp, 'w') as f:
+            f.write(CONFIG_FILE % (self.server_cert, CLIENT_ID, CLIENT_SECRET))
+        environ['{{cookiecutter.module_name.upper()}}_CONFIG_FP'] = fp
+
         self.out_dir = mkdtemp()
-        self._clean_up_files = [self.out_dir]
+        self._clean_up_files = [self.out_dir, fp]
 
     def tearDown(self):
         for fp in self._clean_up_files:

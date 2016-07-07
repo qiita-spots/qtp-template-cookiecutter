@@ -33,6 +33,7 @@ values. Any of these values can be manually changed through the code:
 - ``author``: The name of the plugin author
 - ``email``: The email to contact the plugin author
 - ``URL``: The URL of the project. The default value is generated using the ``organization_name`` and ``repo_name`` values.
+- ``license``: The license of the project. Choose between BSD 3-clause, MIT or Apache. Default is BSD 3-clause.
 
 Example:
 
@@ -50,7 +51,7 @@ Example:
     1 - BSD 3-clause License
     2 - MIT License
     3 - Apache Software License 2.0
-    Choose from 1, 2, 3 [1]: 
+    Choose from 1, 2, 3 [1]:
 
 
 Cookiecutter will create a directory using the ``repo_name`` value in the
