@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 # -----------------------------------------------------------------------------
-# Copyright (c) 2013, The Qiita Development Team.
+# Copyright (c) {% now 'local', '%Y' %}, {{cookiecutter.author}}.
 #
-# Distributed under the terms of the BSD 3-clause License.
+# Distributed under the terms of the {{cookiecutter.license}} License.
 #
 # The full license is in the file LICENSE, distributed with this software.
 # -----------------------------------------------------------------------------
@@ -37,7 +37,7 @@ setup(name='{{cookiecutter.project_name}} Qiita Type Plugin',
       description='Qiita Type Plugin: {{cookiecutter.project_name}}',
       author="{{cookiecutter.author}}",
       author_email="{{cookiecutter.email}}",
-      url='{{cookiecutter.url}}',
+      url='{{cookiecutter.URL}}',
       test_suite='nose.collector',
       packages=['{{cookiecutter.module_name}}'],
       package_data={'{{cookiecutter.module_name}}': ['support_files/config_file.cfg']},
