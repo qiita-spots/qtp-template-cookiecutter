@@ -64,11 +64,11 @@ the comments. The following list contains a general overview of what's required
 in those TODO sections:
 
 - File ``README.rst``: Add a description of the artifact types added by the type plugin
+- File ``module_name/__init__.py``: Create a list of QiitaArtifactType elements to register the types into Qiita
 - File ``module_name/validate.py``: Code to validate and fix the files of a new artifact
 - File ``module_name/summary.py``: Code to generate an HTML summary of an artifact
 - File ``module_name/tests/test_validate.py``: Code to properly test the validation of the artifact you are adding
 - File ``module_name/tests/test_summary.py``: Code to properly test the HTML generation of an the new artifact summary
-- File ``module_name/tests/test_plugin.py``: Adding tests here is creating "integration" tests for the plugin
 
 Once all the TODO's are completed, your can upload your code to github and see
 the tests run (if travis and coveralls are enabled).
